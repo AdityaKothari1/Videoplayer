@@ -20,7 +20,7 @@ export default function Home() {
   console.log(currentVideo, desc)
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-10  absolute top-24 whitespace-nowrap">
+    <div className="flex min-h-screen flex-col items-center justify-between p-10  absolute top-24 ">
       <div className="flex-col md:flex-row  lg:flex  gap-x-10 ">
         <VideoPlayer current={currentVideo} title={desc[0]} desc={desc[1]} thumb={poster} />
 

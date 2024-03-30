@@ -26,7 +26,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ current, title, desc, thumb }
             video.addEventListener('timeupdate', updateTime);
             video.autoplay = true;
             video.muted = mute;
-            // setIsPlaying(true)
+            setIsPlaying(true)
             setTimeout(() => {
                 setDuration(video.duration);
 
@@ -97,13 +97,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ current, title, desc, thumb }
             if (!isFullscreen) {
                 if (video.requestFullscreen) {
                     video.requestFullscreen();
-                } else if (video.requestFullscreen) {
-                    video.requestFullscreen();
-                } else if (video.requestFullscreen) {
-                    video.requestFullscreen();
-                } else if (video.requestFullscreen) {
-                    video.requestFullscreen();
                 }
+
+
             } else {
                 if (document.exitFullscreen) {
                     document.exitFullscreen();
@@ -111,10 +107,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ current, title, desc, thumb }
                 } else if (document.mozCancelFullScreen) {
                     //@ts-ignore
                     document.mozCancelFullScreen();
-                } else if (document.exitFullscreen) {
-                    document.exitFullscreen();
-                } else if (document.exitFullscreen) {
-                    document.exitFullscreen();
                 }
             }
         }
